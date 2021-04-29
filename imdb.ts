@@ -2,8 +2,7 @@
 
 import {Movie} from "./movie";
 import * as fs from "fs";
-//let interface = require('readline-sync'); //para poder escribir en consola con el metodo question
-//npm install readline-sync
+
 
 export class IMDB {
 
