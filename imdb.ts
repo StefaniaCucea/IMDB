@@ -25,53 +25,26 @@ export class IMDB {
 
         public obtenerInstanciaImdb(nombreFichero:string):IMDB{
 
-                    let accesoFichero = (fs.readFileSync(nombreFichero, "utf-8"));
+                    let accesoFichero = fs.readFileSync(nombreFichero, "utf-8");
 
-                    
-
-                    JSON.parse(accesoFichero);
-                    
-                    
-                    console.log(instancia1.peliculas[0].title);
-
-                    return 
-
-                   
-
-
-
+                    let toObject:IMDB= JSON.parse(accesoFichero);
+                    return toObject
         }
 
 }
 
-let movie1:Movie= new Movie('Tenet', 2020,'UU.EE','fiction')
-let movie2:Movie= new Movie('Mulán', 2020,'China','adventure')
+//let movie1:Movie= new Movie('Tenet', 2020,'UU.EE','fiction')
+//let movie2:Movie= new Movie('Mulán', 2020,'China','adventure')
 
-let acces1:IMDB = new IMDB([movie1,movie2]);
+let acces1:IMDB = new IMDB([])
 
-console.log(acces1.escribirEnFicheroJSON("equis.json"));
+//acces1.escribirEnFicheroJSON('acces1.json')
+let acces2:IMDB = acces1.obtenerInstanciaImdb('acces1.json')
 
-
-
-
-
-
+console.log(acces1)
+console.log(acces2)
 
 
-
-
-
-
-let ficheroLeido = (fs.readFileSync("imdbBBDD.json", "utf-8"));
-
-console.log(ficheroLeido);
-
-let toObject = JSON.parse(ficheroLeido);
-console.log(toObject.peliculas);
-let instancia1:IMDB = new IMDB(toObject.peliculas)
-//console.log(instancia1.peliculas[0].title);
-
-instancia1.escribirEnFicheroJSON("imdbBBDD.json");
 
 
 
