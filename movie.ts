@@ -1,3 +1,4 @@
+import {Proffesional} from './'
 class Movie{
 
     public title:string
