@@ -1,4 +1,4 @@
-import {Proffesional} from './'
+import {Proffesional} from './professional'
 class Movie{
 
     public title:string
