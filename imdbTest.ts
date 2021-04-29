@@ -16,4 +16,6 @@ let acces1:IMDB = new IMDB([movie1,movie2]);
 
 console.log(JSON.stringify(acces1));
 
+console.log(fs.writeFileSync(imdbBBDD.json, acces1));
+
 
