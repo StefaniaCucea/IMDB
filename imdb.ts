@@ -51,7 +51,11 @@ let acces1:IMDB = new IMDB([movie1,movie2]);
 /********************************************************************* */
 //llamada al metodo obtenerInstanciaImdb
 
-console.log(acces1.obtenerInstanciaImdb("equis.json"));
+console.log(acces1.obtenerInstanciaImdb("imdbBBDD.json"));
+
+/*********************************************************************** */
+//metodo escribir por consola nueva pelicula IMDB
+
 
 
 

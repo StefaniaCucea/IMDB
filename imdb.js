@@ -32,7 +32,7 @@ var acces1 = new IMDB([movie1, movie2]);
 // console.log(acces1.escribirEnFicheroJSON("equis.json"));
 /********************************************************************* */
 //llamada al metodo obtenerInstanciaImdb
-console.log(acces1.obtenerInstanciaImdb("equis.json"));
+console.log(acces1.obtenerInstanciaImdb("imdbBBDD.json"));
 // let ficheroLeido = (fs.readFileSync("imdbBBDD.json", "utf-8"));
 // console.log(ficheroLeido);
 // let toObject = JSON.parse(ficheroLeido);
