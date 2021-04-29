@@ -1,5 +1,5 @@
-import {Proffesional} from './'
-class Movie{
+import {Proffesional} from './professional'
+export class Movie{
 
     public title:string
     public releaseYear:number
