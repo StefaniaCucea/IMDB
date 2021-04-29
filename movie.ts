@@ -50,6 +50,4 @@ class Movie{
                 Genre:${this.genre}`
     }
 
-   
-
 }
