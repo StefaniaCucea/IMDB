@@ -1,1 +1,13 @@
-{"peliculas":[{"title":"Tenet","releaseYear":2020,"nationality":"UU.EE","genre":"fiction"},{"title":"Mulán","releaseYear":2020,"nationality":"China","genre":"adventure"}]}
+{
+    "peliculas": [{
+        "title": "Tenet",
+        "releaseYear": 2020,
+        "nationality": "UU.EE",
+        "genre": "fiction"
+    }, {
+        "title": "Mulán",
+        "releaseYear": 2020,
+        "nationality": "China",
+        "genre": "adventure"
+    }]
+}
