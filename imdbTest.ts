@@ -12,5 +12,8 @@ let name2:Professional = new Professional("Cleant Eastwood",80,"Multiples genres
 
 let acces1:IMDB = new IMDB([movie1,movie2]);
 
-console.log(acces1.peliculas[0].toString());
+//console.log(acces1.peliculas[0].toString());
+
+console.log(JSON.stringify(acces1));
+
 
