@@ -25,7 +25,7 @@ export class IMDB {
 
         public obtenerInstanciaImdb(nombreFichero:string):IMDB{
 
-                    let accesoFichero = (fs.readFileSync(nombreFichero), "utf-8");
+                    let accesoFichero = this.peliculas.fs.readFileSync(nombreFichero, "utf-8");
                                          
                     
                         return JSON.parse(this.peliculas);
