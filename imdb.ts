@@ -24,39 +24,34 @@ export class IMDB {
         }
 
         public obtenerInstanciaImdb(nombreFichero:string):IMDB{
-
-                    let accesoFichero = this.peliculas.fs.readFileSync(nombreFichero, "utf-8");
-                                         
                     
-                        return JSON.parse(this.peliculas);
-                      
-                    
-                    
-
-                    
-
-                   
-
-
+            // let readFile = fs.readFileSync(nombreFichero);
+            // let student = JSON.parse(nombreFichero);
+            // return student;  
+            const fs = require('fs')
+            let jsonData = JSON.parse(fs.readFileSync(nombreFichero, 'utf-8')) 
+            return jsonData;             
 
         }
 
 }
+
+/********************************************************************* */
+//llamada a metodo escribirEnFicheroJSON
 
 let movie1:Movie= new Movie('Tenet', 2020,'UU.EE','fiction')
 let movie2:Movie= new Movie('Mulán', 2020,'China','adventure')
 
 let acces1:IMDB = new IMDB([movie1,movie2]);
 
-console.log(acces1.escribirEnFicheroJSON("equis.json"));
+// console.log(acces1.escribirEnFicheroJSON("equis.json"));
+
+
+
+/********************************************************************* */
+//llamada al metodo obtenerInstanciaImdb
 
 console.log(acces1.obtenerInstanciaImdb("equis.json"));
-
-
-
-
-
-
 
 
 
