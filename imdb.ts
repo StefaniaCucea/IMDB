@@ -2,6 +2,8 @@
 
 import {Movie} from "./movie";
 import * as fs from "fs";
+let interface = require('readline-sync'); //para poder escribir en consola con el metodo question
+//npm install readline-sync
 
 
 export class IMDB {
@@ -31,6 +33,13 @@ export class IMDB {
             const fs = require('fs')
             let jsonData = JSON.parse(fs.readFileSync(nombreFichero, 'utf-8')) 
             return jsonData;             
+
+        }
+
+        public writeDataMovie(datosPelicula:IMDB):IMDB{
+
+            var datosPelicula = interface.question("Escribe el primer numero: ");
+
 
         }
 
