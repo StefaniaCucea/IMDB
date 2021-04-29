@@ -1,6 +1,8 @@
 import {IMDB} from "./imdb";
 import {Movie} from "./movie";
 import {Professional} from "./professional";
+import * as fs from "fs";//asi importamos todos los metodos de FileSystem
+
 
 
 
@@ -14,8 +16,8 @@ let acces1:IMDB = new IMDB([movie1,movie2]);
 
 //console.log(acces1.peliculas[0].toString());
 
-console.log(JSON.stringify(acces1));
+let objetoString = JSON.stringify(acces1);//convertimos a string el objeto array acces1
 
-console.log(fs.writeFileSync(imdbBBDD.json, acces1));
+fs.writeFileSync("imdbBBDD.json", objetoString);
 
 
