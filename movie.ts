@@ -1,18 +1,20 @@
-import {Proffesional} from './professional'
-class Movie{
+
+import {Professional} from './professional'
+
+export class Movie{
 
     public title:string
     public releaseYear:number
-    public actors:Proffesional[]
+    public actors:Professional[]
     public nationality: string
-    public director: Proffesional
-    public writer: Proffesional
+    public director: Professional
+    public writer: Professional
     public language: String
     public platform: string
     public isMCU: boolean
     public mainCharacterName: String
-    public producer: Proffesional
-    public distributor: Proffesional
+    public producer: Professional
+    public distributor: Professional
     public genre: string
     
     constructor(titleP:string, releaseYearP:number, nationalityP:string, genreP:string){
