@@ -27,14 +27,14 @@ export class IMDB {
 
                     let accesoFichero = (fs.readFileSync(nombreFichero, "utf-8"));
 
-                    console.log(accesoFichero);
+                    
 
-                    let toObject = JSON.parse(accesoFichero);
-                    console.log(toObject.peliculas);
-                    let instancia1:IMDB = new IMDB(toObject.peliculas)
+                    JSON.parse(accesoFichero);
+                    
+                    
                     console.log(instancia1.peliculas[0].title);
 
-                    return
+                    return 
 
                    
 
