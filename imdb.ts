@@ -23,6 +23,25 @@ export class IMDB {
 
         }
 
+        public obtenerInstanciaImdb(nombreFichero:string):IMDB{
+
+                    let accesoFichero = (fs.readFileSync(nombreFichero, "utf-8"));
+
+                    console.log(accesoFichero);
+
+                    let toObject = JSON.parse(accesoFichero);
+                    console.log(toObject.peliculas);
+                    let instancia1:IMDB = new IMDB(toObject.peliculas)
+                    console.log(instancia1.peliculas[0].title);
+
+                    return
+
+                   
+
+
+
+        }
+
 }
 
 let movie1:Movie= new Movie('Tenet', 2020,'UU.EE','fiction')
@@ -43,16 +62,16 @@ console.log(acces1.escribirEnFicheroJSON("equis.json"));
 
 
 
-// let ficheroLeido = (fs.readFileSync("imdbBBDD.json", "utf-8"));
+let ficheroLeido = (fs.readFileSync("imdbBBDD.json", "utf-8"));
 
-// console.log(ficheroLeido);
+console.log(ficheroLeido);
 
-// let toObject = JSON.parse(ficheroLeido);
-// console.log(toObject.peliculas);
-// let instancia1:IMDB = new IMDB(toObject.peliculas)
-// //console.log(instancia1.peliculas[0].title);
+let toObject = JSON.parse(ficheroLeido);
+console.log(toObject.peliculas);
+let instancia1:IMDB = new IMDB(toObject.peliculas)
+//console.log(instancia1.peliculas[0].title);
 
-// instancia1.escribirEnFicheroJSON("imdbBBDD.json");
+instancia1.escribirEnFicheroJSON("imdbBBDD.json");
 
 
 
