@@ -25,23 +25,16 @@ export class IMDB {
 
         }
 
+        
+
         public obtenerInstanciaImdb(nombreFichero:string):IMDB{
-                    
-            // let readFile = fs.readFileSync(nombreFichero);
-            // let student = JSON.parse(nombreFichero);
-            // return student;  
-            const fs = require('fs')
-            let jsonData = JSON.parse(fs.readFileSync(nombreFichero, 'utf-8')) 
-            return jsonData;             
 
-        }
+            let accesoFichero = fs.readFileSync(nombreFichero, "utf-8");
 
-        public writeDataMovie(datosPelicula:IMDB):IMDB{
+            let toObject:IMDB= JSON.parse(accesoFichero);
 
-            var datosPelicula = interface.question("Escribe el primer numero: ");
-
-
-        }
+            return toObject
+}
 
 }
 
@@ -60,7 +53,7 @@ let acces1:IMDB = new IMDB([movie1,movie2]);
 /********************************************************************* */
 //llamada al metodo obtenerInstanciaImdb
 
-console.log(acces1.obtenerInstanciaImdb("imdbBBDD.json"));
+//console.log(acces1.obtenerInstanciaImdb("imdbBBDD.json"));
 
 /*********************************************************************** */
 //metodo escribir por consola nueva pelicula IMDB

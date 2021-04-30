@@ -4,6 +4,8 @@ exports.__esModule = true;
 exports.IMDB = void 0;
 var movie_1 = require("./movie");
 var fs = require("fs");
+var interface = require('readline-sync'); //para poder escribir en consola con el metodo question
+//npm install readline-sync
 var IMDB = /** @class */ (function () {
     function IMDB(peliculas) {
         this.peliculas = peliculas;
@@ -21,6 +23,9 @@ var IMDB = /** @class */ (function () {
         var jsonData = JSON.parse(fs.readFileSync(nombreFichero, 'utf-8'));
         return jsonData;
     };
+    IMDB.prototype.writeDataMovie = function (datosPelicula) {
+        var datosPelicula = interface.question("Escribe el primer numero: ");
+    };
     return IMDB;
 }());
 exports.IMDB = IMDB;
@@ -33,6 +38,8 @@ var acces1 = new IMDB([movie1, movie2]);
 /********************************************************************* */
 //llamada al metodo obtenerInstanciaImdb
 console.log(acces1.obtenerInstanciaImdb("imdbBBDD.json"));
+/*********************************************************************** */
+//metodo escribir por consola nueva pelicula IMDB
 // let ficheroLeido = (fs.readFileSync("imdbBBDD.json", "utf-8"));
 // console.log(ficheroLeido);
 // let toObject = JSON.parse(ficheroLeido);
