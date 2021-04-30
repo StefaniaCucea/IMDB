@@ -1,14 +1,23 @@
 import {IMDB} from "./imdb"
 import {Movie} from "./movie";
-
+import * as fs from "fs";
 let read = require("readline-sync");
 
-let  titulo = read.question(`Title: `);
-let  year = read.question(`ReleaseYear: `);
-let  nation = read.question(`TNationality: `);
-let  genre = read.question(`Genre: `);
+//generando instancias vacias para llamar a los metodos
+let moviemovie:Movie= new Movie('',0,'','')
+let imdb:IMDB= new IMDB([])
 
-console.log(titulo.obtenerInstanciaImdb("imdbBBDD.json"));
-console.log(year.obtenerInstanciaImdb("imdbBBDD.json"));
-console.log(nation.obtenerInstanciaImdb("imdbBBDD.json"));
-console.log(genre.obtenerInstanciaImdb("imdbBBDD.json"));
+//pidiendo datos
+moviemovie.title= read.question('title:')
+moviemovie.releaseYear= read.question('releaseYear')
+moviemovie.nationality= read.question('nationality:')
+moviemovie.genre= read.question('Genre:')
+
+// guardando en imdb las pelis anteriores y la nueva
+let imdb2 = imdb.obtenerInstanciaImdb('imdbBBDD.json')
+console.log(imdb2);
+
+imdb2.peliculas.push(moviemovie)
+//aqui sobreescribes sobre el fichero con la instancia de imdb
+
+imdb2.escribirEnFicheroJSON('imdbBBDD.json');

@@ -2,8 +2,7 @@
 
 import {Movie} from "./movie";
 import * as fs from "fs";
-let interface = require('readline-sync'); //para poder escribir en consola con el metodo question
-//npm install readline-sync
+
 
 
 export class IMDB {
@@ -20,17 +19,18 @@ export class IMDB {
 
         public escribirEnFicheroJSON(nombreFichero:string){    
             
-           let ficheroString = JSON.stringify(this.peliculas);
+           let ficheroString = JSON.stringify(this);
            fs.writeFileSync(nombreFichero,ficheroString);
 
         }
 
         public obtenerInstanciaImdb(nombreFichero:string):IMDB{
 
-                    let accesoFichero = fs.readFileSync(nombreFichero, "utf-8");
+            let JSONgenerado = fs.readFileSync(nombreFichero, "utf-8");
+            let stringToObject: IMDB = JSON.parse(JSONgenerado);
 
-                    let toObject:IMDB= JSON.parse(accesoFichero);
-                    return toObject
+            let imdbDevuelto:IMDB = new IMDB(stringToObject.peliculas)
+            return imdbDevuelto
         }
 
 }

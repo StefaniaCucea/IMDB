@@ -1,6 +1,16 @@
 {
-    "title": "Mulán",
-    "releaseYear": 2020,
-    "nationality": "China",
-    "genre": "adventure"
+    "peliculas": [
+        {
+            "title": "efsef",
+            "releaseYear": "esfs",
+            "nationality": "efse",
+            "genre": "fse"
+        },
+        {
+            "title": "Mulan",
+            "releaseYear": "2001",
+            "nationality": "Americana",
+            "genre": "Aventuras"
+        }
+    ]
 }
